@@ -56,7 +56,7 @@ exports.register = async (req, res)=>{
 //login process
 exports.login =  async (req, res) => {
     const {email, password} = req.body;
-    const sql = 'SELECT * FROM users WHERE email = ?'
+    const sql = `SELECT * FROM users WHERE email = ?`
 
     db.query(sql, [email], async (err, result) => {
         if(err) {
