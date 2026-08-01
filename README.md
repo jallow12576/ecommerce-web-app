@@ -30,28 +30,7 @@ This project is part of my journey to strengthen my full-stack development skill
 
 ---
 
-## Project Structure
 
-```
-ecommerce-web-app/
-│
-├── backend/
-│   ├── src/
-│   │   ├── config/
-│   │   ├── controllers/
-│   │   ├── routes/
-│   │   └── server.js
-│   │
-│   ├── package.json
-│   └── .env
-│
-├── frontend/
-│
-├── .gitignore
-└── README.md
-```
-
----
 
 ## Features
 
@@ -96,56 +75,6 @@ ecommerce-web-app/
 
 ---
 
-## Learning Goals
-
-This project is focused on understanding:
-
-- REST APIs
-- Authentication & Authorization
-- MySQL Database Design
-- Backend Architecture
-- React Frontend Development
-- Git & GitHub Workflow
-- Clean Code Practices
-
----
-
-## Installation
-
-Clone the repository
-
-```bash
-git clone https://github.com/jallow12576/ecommerce-web-app.git
-```
-
-Navigate into the project
-
-```bash
-cd ecommerce-web-app
-```
-
-Install backend dependencies
-
-```bash
-cd backend
-npm install
-```
-
-Create a `.env` file and configure your database credentials.
-
-Start the backend server
-
-```bash
-npm run dev
-```
-
----
-
-## Development Journey
-
-This project is being developed incrementally, with each feature implemented, tested, documented, and committed to GitHub following a structured learning roadmap.
-
----
 
 ## Author
 
