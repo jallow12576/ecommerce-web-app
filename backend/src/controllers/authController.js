@@ -106,7 +106,14 @@ exports.login =  async (req, res) => {
     })
 }
 
+// a route to test if my middleware is actually working 
 
+exports.getProfile = (req, res) => {
+    res.status(200).json({
+        message: "Profile fetched successfully",
+        user: req.user
+    })
+}
 
 
 
