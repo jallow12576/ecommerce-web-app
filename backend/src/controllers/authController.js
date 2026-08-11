@@ -109,9 +109,24 @@ exports.login =  async (req, res) => {
 // a route to test if my middleware is actually working 
 
 exports.getProfile = (req, res) => {
-    res.status(200).json({
-        message: "Profile fetched successfully",
-        user: req.user
+    db.query(`SELECT id, name, email FROM users WHERE id = ?`, [req.user.id], (err, result) => {
+        if(err) {
+            return res.status(500).json({
+                message: "Database error",
+                error: err
+            })
+        }
+
+        if(result.length === 0) {
+            return res.status(404).json({
+                message: "User not found"
+            })
+        }
+
+        res.status(200).json({
+            message: "Profile fetched successfully",
+            user: result[0]
+        })
     })
 }
 
