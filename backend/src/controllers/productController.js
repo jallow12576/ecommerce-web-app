@@ -1,8 +1,8 @@
-const db = ('../config/db');
+const db = require('../config/db')
 
 exports.getProducts = async(req, res) => {
     db.query(
-        'SELECT * FROM products', (err, result) => {
+        `SELECT * FROM products`, (err, result) => {
             if(err) {
                 return res.status(500).json({
                     message: 'Database error'
